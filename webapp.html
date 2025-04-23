@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Football Quiz</title>
+    <style>
+        body {
+            background-color: #0b0b0b;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .quiz-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏈 College Football Quiz 🏈</h1>
+    <div class="quiz-box">
+        <p id="question">Click below to get a football fact question!</p>
+        <button onclick="newQuestion()">Get Question</button>
+        <p id="answer"></p>
+    </div>
+
+    <p><a href="scratch.html" style="color: #ffd700;">Back to Scratch Page</a></p>
+
+    <script>
+        const questions = [
+            { q: "Which team has won the most NCAA football championships?", a: "Princeton" },
+            { q: "How many players are on the field for one team during play?", a: "11" },
+            { q: "What trophy is awarded to the best college football player each year?", a: "Heisman Trophy" },
+            { q: "Which college football team is known as the Fighting Irish?", a: "Notre Dame" },
+            { q: "What conference is Alabama part of?", a: "SEC" }
+        ];
+
+        function newQuestion() {
+            const random = questions[Math.floor(Math.random() * questions.length)];
+            document.getElementById('question').innerText = random.q;
+            document.getElementById('answer').innerText = "Answer: " + random.a;
+        }
+    </script>
+</body>
+</html>

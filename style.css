@@ -1,24 +1,46 @@
 body {
-    background-color: #121212;
+    background-color: #1a1a1a;
     color: #f0f0f0;
     font-family: Arial, sans-serif;
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
+.header {
+    text-align: center;
+    padding: 20px;
+    background: url('images/stadium_lights.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.content {
+    padding: 40px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+ol li ul {
+    list-style-type: square;
+}
+
+.tableauPlaceholder {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
     color: #ffd700;
 }
 
-p {
-    font-size: 18px;
+a {
+    color: #00aced;
+    text-decoration: none;
 }
 
-#special {
+a:hover {
     text-decoration: underline;
-}
-
-.box {
-    border: 2px solid #fff;
-    padding: 20px;
-    margin: 20px;
 }
